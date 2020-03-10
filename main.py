@@ -46,45 +46,37 @@ latch.direction = digitalio.Direction.OUTPUT
 def qpause():
     time.sleep(0.2)
 
-
 while True:
-    # shifting 256 bits into the data pin
     latch.value = False
     rs= simpleio.shift_in(data, clk)
     print("switches: {0:#010b} {0}".format(rs),end="")
     latch.value = True
-
-    #kbd.send(Keycode.CONTROL, Keycode.V)
-    #kbd.send(Keycode.CONTROL, Keycode.X)
-    #kbd.send(Keycode.ALT, Keycode.TAB)  
-    #cc.send(ConsumerControlCode.MUTE)
+    
+    # more keypress codes
+    # kbd.send(Keycode.CONTROL, Keycode.V)
+    # kbd.send(Keycode.CONTROL, Keycode.X) 
+    # cc.send(ConsumerControlCode.MUTE)
         
     if rs==1:
         cc.send(ConsumerControlCode.SCAN_NEXT_TRACK)
         qpause()
-    
     if rs==2:
         cc.send(ConsumerControlCode.PLAY_PAUSE)
         qpause()
-    
     if rs==4:
         cc.send(ConsumerControlCode.SCAN_PREVIOUS_TRACK)
         qpause()
-
     if rs==8:
         kbd.send(Keycode.F12)
         qpause()
-
     if rs==16:
         cc.send(ConsumerControlCode.MUTE)
         qpause()
-
     if rs==32:
         cc.send(ConsumerControlCode.VOLUME_INCREMENT)
         qpause()
-
     if rs==64:
         cc.send(ConsumerControlCode.VOLUME_DECREMENT)
-        qpause()
-            
+        qpause()     
+
     time.sleep(0.05)
