@@ -11,10 +11,8 @@ clk               10      D3
 load (latch)       9      D0 
 
 """
-
 import time
 import board
-from analogio import AnalogIn
 import digitalio
 import simpleio
 from adafruit_hid.keyboard import Keyboard
@@ -25,11 +23,6 @@ from adafruit_hid.consumer_control import ConsumerControl
 
 # set up multimedia device
 cc = ConsumerControl(usb_hid.devices)
-
-
-# Analog input on D1
-analog1in = AnalogIn(board.D1)
-
 
 # set up hid
 kbd = Keyboard(usb_hid.devices)
