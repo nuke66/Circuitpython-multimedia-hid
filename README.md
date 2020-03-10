@@ -9,3 +9,5 @@ Technically you should also use capacitors on the VCC and ground connections but
 
 This was a fun little project that let me play with using the SimepleIO library with CMOS chips like 4021 (and 74HC595 in another project).
 
+<img src="\media\multimedia-hid-sm.jpg" width="50%" height="auto" style="max-width:350px;margin-bottom:0; padding-bottom:0;">
+
