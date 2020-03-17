@@ -6,4 +6,4 @@ This was a fun little project that let me play with using the SimepleIO library 
 
 <img src="multimedia-hid-sm.jpg" width="50%" height="auto" style="max-width:350px;margin-bottom:0; padding-bottom:0;">
 
-<img src="multimedia-hid.jpg" width="50%" height="auto" style="max-width:350px;margin-bottom:0; padding-bottom:0;">
+<img src="Circuitpython-multimedia-hid.jpg" width="50%" height="auto" style="max-width:350px;margin-bottom:0; padding-bottom:0;">
