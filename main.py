@@ -2,14 +2,29 @@
 Use device as HID (keyboard) to send multimedia and keystrokes to attached PC.
 
 This example uses Adafruit Trinket M0 and a CMOS 4021 8x input PISO to connect 8 different switches.
-Each switch set up to do a different function.
+Each switch set up to do a different function.  Note: any unused inputs should be tied to ground.  As input 8 is 
+unused it is connected to ground.
 
-cmos 4021         pin   Trinket M0
-----------------+-----+------------
-q8 (serial out)    3      D2
-clk               10      D3
-load (latch)       9      D0 
-
+CD4021 pin connections:
+           
+Pin  |  Description  | Comments
+-----+---------------+---------------------
+1       Input 8        Connect to gnd
+2       -
+3       Serial out     D2 on Trinket
+4       Input 4        Connect to swtich
+5       Input 3        Connect to switch
+6       Input 2        Connect to switch
+7       Input 1        Connect to switch
+8       Ground         Connect to ground
+9       Load (latch)   D0 on Trinket
+10      Clock          D3 on Trinket
+11      Serial In      Connect to ground
+12      - 
+13      Input 5        Connect to switch
+14      input 6        Connect to switch
+15      Input 7        Connect to switch
+16      Vcc            Connect to power
 """
 import time
 import board
